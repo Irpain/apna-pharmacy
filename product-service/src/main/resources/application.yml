@@ -1,0 +1,13 @@
+server:
+  port: 8083
+  error:
+    include: always
+spring:
+  data:
+    mongodb:
+      database: ProductService
+      uri: mongodb://localhost:27017/
+  application:
+    name: product-service
+
+

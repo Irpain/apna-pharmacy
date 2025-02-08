@@ -1,0 +1,67 @@
+<app-h-all></app-h-all>
+<!-- <mat-card class="offers" style="text-align:center;">
+  <h2 style="height: 10px;">What are you looking for?</h2>
+  <form class="d-flex" role="search" style="margin-right: 50px;width: 50%;margin-left: 350px;margin-top: 20px;">
+      <input class="form-control me-2" type="search" [(ngModel)]="searchText" placeholder="Search" aria-label="Search"> -->
+      <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
+    <!-- </form>
+</mat-card> -->
+<div class="form-group mb-4">
+  <input class="form-control" type="text" [(ngModel)]="searchText" placeholder="Search">
+</div>
+
+<ng-template #noResults>
+  <p>No results found for "{{searchText}}".</p>
+</ng-template>
+<div id="main">
+  <article>
+
+    <div class="container">
+      <section class="my-2 pb-2">
+
+        <mat-toolbar color="white" style="text-align:center;">
+          Health Care Prducts
+          <span class="example-spacer"></span>
+          
+        </mat-toolbar>
+
+        <div class="container">
+          <div fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutGap="32px"  fxLayoutAlign="flex-start"
+          *ngIf="(Productsmodel | search: searchText).length > 0; else noResults">
+            <ng-container *ngFor="let x of (Productsmodel | search: searchText)" >
+              <mat-card fxFlex="0 1 calc(25% - 32px)" fxFlex.lt-md="0 1 calc(33.3% - 32px)" fxFlex.lt-sm="100%"
+                class="mat-elevation-z6" style="margin-bottom:20px;" ><a (click) = "getProductById(x.productId)">
+
+              
+                 <mat-card-header>
+                  
+                  <app-image [image]="x.productImage"></app-image>
+              </mat-card-header>
+            </a>
+              <mat-card-content id="p-name">
+                  <p>{{x.productName}}</p>
+              </mat-card-content>
+              <mat-divider></mat-divider>
+              <mat-card-content class="mt-2" id="p-price">
+             
+                  <p style="margin-top:0.5px;">Price: ₹{{x.productPrice}}</p>
+              </mat-card-content>
+              <mat-card-actions>
+              
+                  <button mat-stroked-button color="warn" style="margin-left:30%; text-align: center;" (click)="Addtocart(x.productId)"> Add to Cart</button>
+              </mat-card-actions>
+
+
+              </mat-card>
+            </ng-container>
+          </div>
+        </div>
+      </section>
+    </div>  
+
+
+
+  </article>
+</div>
+
+<app-f-all></app-f-all>

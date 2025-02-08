@@ -1,0 +1,45 @@
+<!-- <div class="f">
+    <h2>My Profile</h2>
+</div>
+<form #login="ngForm"  action="#">
+    <mat-form-field class="form-group" style="width: 48%; margin-bottom: -3%;">
+        <label>Shop Name</label>
+        <input type="text" required class="form-control" name="shopName" ngModel>
+    </mat-form-field>
+    <mat-form-field class="form-group" style="width: 50%;margin-bottom: -3%;margin-left: 2%;">
+        <label>Seller Email</label><br>
+        <input type="text" class="form-control" name="sellerEmail" ngModel required>
+    </mat-form-field>
+    <mat-form-field class="form-group" style="width: 100%;margin-bottom: -3%;">
+        <label>Shop Address</label><br>
+        <input type="text" class="form-control" name="shopAddress" ngModel required>
+    </mat-form-field>
+    <div class="row">
+        <div class="form-group, col-sm-4" style="margin-top: 3%;">
+            <label> Shop image </label><br><br>
+            <div>
+                <div>
+                    <input type="file" name="file" (change)="onFileSelected($event)">
+                </div>
+                <div *ngIf="imageData">
+                    <img [src]="imageData" [alt]="login.value.name" height="100px">
+                </div>
+            </div>
+        </div>
+        <mat-card-content class="form-group , col-sm-4" style="margin-top: 2%;">
+            <label> Location </label><br><br>
+            <a href="https://www.google.com/maps/place/29%C2%B016'14.0%22N+75%C2%B018'36.3%22E/@29.2814498,75.3062321,15z/data=!4m6!3m5!1s0x3913e0e9d88155c9:0xaf1c0200b5332c3d!7e2!8m2!3d29.2705437!4d75.3100803"
+                target="_blank">
+                <img src="/assets/image/image.ico" id="lock">
+            </a>
+        </mat-card-content>
+        <mat-form-field class="form-group , col-sm-4">
+            <label> Description </label><br><br>
+            <input type="text" class="form-control" name="shopDescription" ngModel id="Des">
+        </mat-form-field>
+    </div><br>
+    <div class="but">
+        <button type="submit" class="btn btn-primary" (click)="save()">Update Detail</button>
+    </div>
+</form>
+ -->

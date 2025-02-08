@@ -1,0 +1,109 @@
+
+table, th, td {
+    border:1px solid black;
+}
+.f{
+    text-align: center;
+    border-bottom: 2px solid black;
+}
+.z{
+    margin: 0;
+    padding: 0;
+}
+.box{
+    position: absolute;
+    margin-left: 10%;
+    margin-right: 0%;
+    height: 620px;
+    width: 90%;
+    border: 2px solid black;
+    background-image: url('/assets/image/map.ico');
+}
+.c{
+    display: flex;
+    border: 2px solid black;
+    width: 100%;
+}
+.box1{
+    height: 100%;
+    background-color: white;
+}
+.box2{
+    height: 100%;
+    color: aquamarine;
+    margin-left: 40%;
+    /* text-align: center; */
+    margin-top: 2%;
+    /* margin-right: 30%; */
+}
+.box4{
+    display: flex;
+    border: 2px solid black;
+    height: 80%;
+    width: 100%;
+}
+.box3{
+    height: 620px;
+    width: 10%;
+    background-color: aliceblue;
+}
+.box3 div{
+    margin-left: 5%;
+}
+.box5{
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 40px;
+    background-color: white;
+}
+.box6{
+    background-color: aquamarine;
+}
+#box{
+    border-bottom: 0.1px solid rgb(234, 228, 228);
+    margin-top: 1%;
+}
+.header_pharmacy_logo{
+    object-fit: contain;
+    width: 100px;
+    margin: 12px 20px 0px 2px;
+  }
+  /* .navbar-brand {
+    text-align: right;
+    font-size: larger;
+  } */
+  #searchfull {
+    width: 50%;
+    align-content: center;
+  }
+  .logoClass2 {
+    height: 4rem;
+    position: absolute;
+    left: 5px;
+    top :10px;
+  }
+  #navBrand {
+    width: 10rem;
+    position: absolute;
+    margin-left: 33rem;
+    
+  }
+  #Features {
+    width: 35rem;
+    position: absolute;
+    margin-left: 65rem;
+    
+    
+  }
+  .MyNav {
+    /* margin-left: 40px;
+    margin-right: 40px; */
+    background-color: aliceblue;
+  }
+  header {
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwpsyluJKA7Q557c4jRCyqxlTUbP3Km0R4IBhBF3plBQ&s");
+  
+    
+  }
+  

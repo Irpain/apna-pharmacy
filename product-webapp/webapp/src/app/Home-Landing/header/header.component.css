@@ -1,0 +1,45 @@
+.header_pharmacy_logo{
+    object-fit: contain;
+    width: 100px;
+    margin: 12px 20px 0px 2px;
+  }
+  /* .navbar-brand {
+    text-align: right;
+    font-size: larger;
+  } */
+  #searchfull {
+    width: 50%;
+    align-content: center;
+  }
+  .logoClass2 {
+    height: 4rem;
+    position: absolute;
+    left: 5px;
+    top :10px;
+  }
+  #navBrand {
+    width: 10rem;
+    position: absolute;
+    margin-left: 33rem;
+    
+  }
+  #Features {
+    width: 25rem;
+    position: absolute;
+    margin-left: 73rem;
+    
+    
+  }
+  .MyNav {
+    /* margin-left: 40px;
+    margin-right: 40px; */
+    background-color: aliceblue;
+  }
+  #nav-bar-main {
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwpsyluJKA7Q557c4jRCyqxlTUbP3Km0R4IBhBF3plBQ&s");
+  
+  }
+  .header-main {
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwpsyluJKA7Q557c4jRCyqxlTUbP3Km0R4IBhBF3plBQ&s");
+  
+  }

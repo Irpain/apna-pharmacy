@@ -1,0 +1,102 @@
+<div class="z">
+    <header class="c">
+        <div class="container" style="padding:40px ;">
+          <img class="logoClass2" src="/assets/image/ApnaPharmacyLogo.jpeg">
+        
+          <div class="row align-items-center">
+            <div class="order-lg-center col-lg-6 col-sm-3 col-3" id="navBrand">
+              <a href="http://localhost:4200" class="navbar-brand" style="font-size:300px ;"
+                style="font-family: sans-serif; text-align: right;">
+                <h2>APNA PHARMACY</h2>
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+    <div class="box4">
+        <div class="box3"><br>
+            <!-- <div><img src="/assets/image/0.ico" ></div><br> -->
+            <div><img src="/assets/image/1.ico" height="20px" >   <a routerLink="/app-header-loggedin" routerLinkActive="active">Home</a></div><br>
+            <!-- <div><img src="/assets/image/2.ico" height="20px" >   <a routerLink="/profile" routerLinkActive="active">My Profile</a></div><br> -->
+            <div><img src="/assets/image/3.ico" height="20px" >   <a routerLink="/view-product" routerLinkActive="active" >View Product</a></div><br>
+            <div><img src="/assets/image/4.ico" height="20px" >   <a routerLink="/add-product" routerLinkActive="active">Add Product</a></div><br>
+            <!-- <div><img src="/assets/image/6.ico" height="20px" >   <a routerLink="/order-history" routerLinkActive="active" >Order & History</a></div><br> -->
+            <div><img src="/assets/image/7.ico" height="20px" >   <a routerLink="/app-header-loggedin" routerLinkActive="active" >LogOut</a></div><br>
+        </div>
+        <div class="box">
+            <div class="box5">
+                <mat-card class="heading" style="height: 4rem;">
+                    <mat-card-header><h1 >Add Product</h1></mat-card-header>
+                </mat-card>
+                <div *ngIf="flag==false" >
+                    <mat-tab-group [selectedIndex]="active" mat-align-tabs="center">
+                        <mat-tab label="Product Details">
+                            <mat-card style="background-color: aliceblue;">
+                                <mat-card>
+                                    <form [formGroup]="productInfoForm" class="stepper">
+                                        <mat-card class="subcard">
+                                            <mat-card-content>
+                                                <mat-label>Product Name</mat-label>
+                                                <mat-form-field class="cardcontent" appearance="fill">
+                                                    <input matInput placeholder="Product Name" formControlName="productName" type="text">
+                                                </mat-form-field>
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <mat-label>MRP</mat-label>
+                                                        <mat-form-field class="cardcontent " appearance="fill">
+                                                            <input matInput placeholder="MRP" formControlName="productPrice" type="number" min="0">
+                                                        </mat-form-field>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <mat-label>Product Category</mat-label>
+                                                        <mat-form-field class="cardcontent" appearance="fill">
+                                                            <mat-label>Select Category</mat-label>
+                                                            <mat-select formControlName="productCategory">
+                                                                <mat-option value="Syrups">Syrups</mat-option>
+                                                                <mat-option value="Tablet">Tablet</mat-option>
+                                                                <mat-option value="Capsules">Capsules</mat-option>
+                                                                <mat-option value="Spray">Spray</mat-option>
+                                                                <mat-option value="Others">Others</mat-option>
+                                                            </mat-select>
+                                                        </mat-form-field>
+                                                    </div>
+                                                    <div class="col-md-4">    
+                                                         <mat-label>Brand</mat-label>
+                                                         <mat-form-field class="cardcontent" appearance="fill">
+                                                             <input matInput placeholder="Enter Brand" formControlName="productBrand" type="text">
+                                                         </mat-form-field>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-4">
+                                                            <mat-label>Upload Image</mat-label>
+                                                            <input class="cardcontent" type="file" formControlName="file" placeholder="Upload Image" (change)="myFile($event)">
+                                                        </div>
+                                                        <div class="col-md-4" >
+                                                            <mat-label>Product Description</mat-label>
+                                                            <mat-form-field class="cardcontent" appearance="fill">
+                                                                <textarea matInput placeholder="Description" formControlName="productDescription" type="text"></textarea>
+                                                            </mat-form-field>
+                                                        </div>
+                                                    </div>
+                                                </div>                                
+                                            </mat-card-content>
+                                        </mat-card>
+                                        <button class="btn btn-success" type="submit" (click)="myProductInfoFunction()">Add Product</button><br><br>
+                                    </form>
+                                </mat-card>
+                            </mat-card>
+                        </mat-tab>
+                    </mat-tab-group>
+                </div>                
+            </div>
+        </div>
+    </div>
+    <app-f-all></app-f-all>
+</div>
+
+
+
+
+
+
+

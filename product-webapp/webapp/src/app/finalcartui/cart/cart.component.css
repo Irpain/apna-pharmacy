@@ -1,0 +1,46 @@
+
+/* .mat-raised-button {
+    border-radius: 40px;
+} */
+
+.whole-card-bg{
+    background-color: rgb(228, 236, 241);
+    padding: 20px;
+}
+
+.example-button-container {
+  display: flex;
+  justify-content: center;
+  width: 120px;
+}
+
+.header-image {
+    background-image: url("/assets/image/ApnaPharmacyLogo.jpeg");
+    background-size: cover;
+  }
+
+  .inside-card-bg{
+    background-color: rgb(230, 231, 231);
+    width: 70%;
+  }
+
+  .mat-divider{
+    border-top-color: white;
+  }
+
+  .col-2{
+    padding: 0px;
+  }
+
+  .offers {
+    
+    
+    height: 100px;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwpsyluJKA7Q557c4jRCyqxlTUbP3Km0R4IBhBF3plBQ&s");
+    
+}
+
+
+  .active{
+    color:orange;
+  }

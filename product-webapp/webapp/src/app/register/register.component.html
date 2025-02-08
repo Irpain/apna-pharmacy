@@ -1,0 +1,72 @@
+<app-login-header></app-login-header>
+<div class="p-3  bg-light text-dark" id="bgcolor" >      
+  <div class="page">
+  <div class="container">
+      <div class="row ">
+        
+          <div class="col-8">
+          <img src=".\assets\img-pr\medicine3.png" class="img-fluid" width="80%" height="90" alt="Loading..">
+        </div>
+       
+        <div class="col-4">
+          <h1 class="font-weight-bold py-3"  style="text-align:center ;">Sign Up</h1>
+          
+          <form (ngSubmit)="registerNow()"  [formGroup]="registerForm">   
+              <div class="form-row">
+                  <div class="mb-3">
+                   <label for="fname">Full Name</label>
+                    <input type="text" placeholder="Enter your name" class="form-control" [(ngModel)] ="user.fullName" formControlName="name">
+                   <span *ngIf= "f['name'].getError('required')!=null" class="text-danger"> Name is required
+              </span>
+                  </div>
+              </div>
+
+              <div class="form-row">
+                  <div class="mb-3">
+                      <label for="email">Email Address</label>
+                    <input type="email" placeholder="Enter your email" [(ngModel)] ="user.email"  class="form-control" formControlName="username">
+                    <span *ngIf= "f['username'].getError('required')!=null" class="text-danger"> Email is required</span>
+                    <span *ngIf= "f['username'].getError('email')!=null" class="text-danger">Email is required in proper format</span>
+                  </div>
+              </div>
+  
+              <div class="form-row">
+                  <div class="mb-3">
+                      <label for="pwd">Password</label>
+                    <input type="password" placeholder="Enter your password"  [(ngModel)] ="user.password" class="form-control" formControlName="password"> 
+                    <span *ngIf= "f['password'].getError('required')!=null" class="text-danger"> Password is required</span>
+                    <span *ngIf= "f['password'].getError('minlength')!=null" class="text-danger">Enter a password of minimum 5 digits</span>    
+                    </div>
+              </div>
+
+              <div class="form-row">
+                  <div class="mb-3">
+                      <label for="pw">Confirm Password</label>
+                    <input type="password" placeholder="Retype your password"  class="form-control" formControlName="Confirmpassword">   
+                    <span *ngIf= "f['Confirmpassword'].getError('required')!=null" class="text-danger"> Password is required</span>
+                    <span *ngIf= "f['Confirmpassword'].getError('minlength')!=null" class="text-danger">Enter a password of minimum 5 digits</span>
+                    <span *ngIf= "f['Confirmpassword'].getError('Mustmatch')!=null" class="text-danger">Password mismatched </span>  
+                    </div>
+              </div>
+  
+              <div class="form-row">
+                  <div class="col-lg-7">
+                    <button type="submit" class="btn1 mt-2 mb-5">Sign Up</button> 
+                   
+                  </div>
+              </div>
+              <p style="text-align:center;" >Already have an account? <a routerLink="/login">Login here</a></p>
+                
+                
+               
+                
+          </form>
+  
+  
+        </div>
+  
+      </div>
+  </div>
+  </div>
+  </div>
+  <app-f-all></app-f-all>

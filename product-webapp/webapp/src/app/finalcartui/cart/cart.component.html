@@ -1,0 +1,191 @@
+
+  
+     
+<app-h-all></app-h-all>
+
+<mat-card  class="mat-elevation-z3 mb-2">
+        
+  <mat-card-header>
+      <!-- <div mat-card-avatar class="header-image"></div> -->
+      <!-- <h1>My Cart</h1> -->
+  <!-- <mat-card-header>My Cart</mat-card-header> -->
+  <mat-card style="width: 15%;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  margin-left: 0.5px;
+  background-color: rgb(228, 223, 223);">
+    <h3 style="color: black; font-size: large; font-weight: bold; padding-left: 60px;">MY CART</h3>
+  </mat-card>
+      <div style="display:flex;
+        flex-direction:column;
+        align-items:flex-end;
+        justify-content:center;
+        height: 20px;
+        width: 95%;
+        position: absolute;
+        margin-top: 150px;
+        ">
+        <mat-card style="width: 20%"> 
+
+      
+           <mat-card-title>Total Amount ({{carts.totalItems}} items): ₹{{carts.totalCartValue}}</mat-card-title>
+           <br>
+          <button mat-raised-button color="primary" style="margin-left: 80px;">Pay Now</button>
+        
+        </mat-card> 
+         </div>
+         <br> <br><br>
+         
+         
+      
+      
+  </mat-card-header>
+
+
+  <mat-card class="inside-card-bg" *ngFor="let recipient of carts.cartProducts | keyvalue"
+  style="margin-top: 20px;">
+      <mat-card-header>
+          <div class="row">
+              <div class="col-2 mt-2">
+                  <app-image [image]="recipient.value.productImage" width="100px;" height="100px;"></app-image>
+              </div>
+              <div class="col-6 mt-2" style="width: 400px;">
+                  <h2>{{recipient.value.productName}}</h2>
+                  <h4>{{recipient.value.productDescription}}</h4>
+                  <!-- <mat-card-subtitle>On Mon, 13 Feb 2022</mat-card-subtitle> -->
+                  <!-- <mat-card-subtitle>Quantity: 2</mat-card-subtitle> -->
+              </div>
+             
+
+              <div class="col-2 mt-2"  style="width:200px;">
+                <div *ngFor="let quant of carts.productQuantity | keyvalue">
+
+                  <div id="selectNumber" 
+          
+                  *ngIf="recipient.key==quant.key">
+                  <h2>Quantity: {{quant.value}}</h2>
+                  </div></div>
+                  <button mat-mini-fab color="primary" aria-label="Add More" style="justify-content:right;" (click)="addMore(recipient.value.productId)">
+                      <mat-icon>plus_one</mat-icon>
+                    </button>
+              </div>
+              <div class="example-button-container">
+                <button mat-fab color="warn" aria-label="Example icon button with a delete icon"  (click)="removeOne(recipient.value.productId)">
+                  <mat-icon>delete</mat-icon>
+                </button>
+              </div>
+
+              
+              <div class="col-2 mt-2">
+                  <h3>prize: ₹{{recipient.value.productPrice}} (Including all taxes)</h3>
+              </div>
+                     
+                     
+                      
+                    
+              
+
+
+            </div>
+
+
+          </mat-card-header>
+          <mat-divider class="divider-1 mt-2 "></mat-divider>
+          <br>
+           <mat-card-content>*  Return for this Item is not allowed</mat-card-content>
+           <mat-divider ></mat-divider>
+
+           
+           <!-- <div class="rating">
+              <mat-icon class="active">star</mat-icon>
+              <mat-icon class="active">star</mat-icon>
+              <mat-icon class="active">star</mat-icon>
+              <mat-icon class="active">star</mat-icon>
+              <mat-icon class="active">star</mat-icon>
+           </div> -->
+         
+      </mat-card> 
+       
+
+      
+  </mat-card>
+  <app-f-all></app-f-all>
+
+
+
+
+
+
+
+
+
+<!-- <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+    <a href="" class="navbar-brand">Shopping Cart
+    </a>
+  </nav>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div style="display:flex;
+  flex-direction:column;
+  align-items:flex-end;
+  justify-content:center;
+  height: 20px;
+  width: 95%;
+  ">
+  <mat-card style="width: 20%"> -->
+  <!-- Part of your first order qualifies for FREE Delivery. Select this option at checkout. Details -->
+    <!-- <mat-card-title>Total Amount({{carts.totalItems}} items):{{carts.totalCartValue}}</mat-card-title>
+    <mat-card><button mat-raised-button color="primary">Proceed for Payment</button></mat-card>
+    <mat-card><button mat-raised-button color="accent">Apply coupons</button></mat-card>
+  </mat-card> -->
+
+
+  <!-- </div>
+  
+
+  <div style="display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:flex-start;
+  height: 100%;
+  width: 80%;"> -->
+
+<!-- <mat-card style="width: 75%" *ngFor="let recipient of carts.cartProducts | keyvalue"> -->
+  <!-- {% for name, item in items %} -->
+    <!-- <img src="https://img1.hkrtcdn.com/20880/prd_2087950-TrueBasics-Advanced-Joint-Strength-with-UCII-Collagen-30-capsules_c_l.jpg" mat-card-avatar/> -->
+    <!-- <mat-card-header> -->
+        <!-- <mat-card-title>Welcome</mat-card-title> -->
+        <!-- <mat-card-title style="margin-bottom: 20px;">{{recipient.value.productName}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <app-image [image]="recipient.value.productImage"></app-image> -->
+        <!-- <img mat-card-sm-image  src="https://img1.hkrtcdn.com/20880/prd_2087950-TrueBasics-Advanced-Joint-Strength-with-UCII-Collagen-30-capsules_c_l.jpg" /> -->
+        <!-- <p>{{recipient.value.productDescription}}</p>
+        <mat-card-subtitle>Price=₹{{recipient.value.productPrice}}(Inclusive of all taxes)</mat-card-subtitle>
+        <mat-card-subtitle style="margin-bottom: 20px;">Delivery by Tomorrow, before 10:00 pm</mat-card-subtitle>
+    </mat-card-content>
+    <mat-card-actions align="flex-start">
+      <div>Qty
+
+        <div *ngFor="let quant of carts.productQuantity | keyvalue">
+
+        <div id="selectNumber" 
+
+        *ngIf="recipient.key==quant.key">
+  
+          {{quant.value}}
+        </div>
+      </div>
+      </div>
+      <button mat-raised-button color="warn">Remove</button>
+      <button mat-raised-button color="primary">Save for later</button>
+      <button mat-raised-button color="basic">See More like this</button>
+    </mat-card-actions>
+  <mat-card-footer style ="padding-right: 40px;">
+</mat-card-footer>  
+</mat-card>
+  </div> -->

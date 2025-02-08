@@ -1,0 +1,365 @@
+<!-- <mat-card class="offers" style="text-align:center;">
+    <h2 style="height: 10px;">What are you looking for?</h2>
+    <form class="d-flex" role="search" style="margin-right: 50px;width: 50%;margin-left: 350px;margin-top: 20px;">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+</mat-card> -->
+<!-- code for  Shop By Category-->
+<mat-toolbar color="white" style="margin-top: 20px;">
+    Shop By Category
+    <span class="example-spacer"></span>
+</mat-toolbar>
+
+<div class="container-fluid" style="display: flex;">
+    <mat-card class="mat-elevation-z2" matRipple>
+        <div class="row">
+            <div class="col-md-auto" style="position: fixed;left: 10px;">
+                <img src="https://newassets.apollo247.com/pub/media/catalog/category/home_essentials_22oct.png"
+                    width="40px" height="40px;" padding="20px;">
+            </div>
+            <div class="col-md-auto">
+                <p>Home Essentials</p>
+            </div>
+        </div>
+    </mat-card>
+
+    <mat-card class="mat-elevation-z2" matRipple>
+        <div class="row">
+            <div class="col-md-auto" style="position: fixed;left: 10px;">
+                <img src="https://newassets.apollo247.com/pub/media/catalog/category/h_and_n.png" width="40px"
+                    height="40px;" padding="20px;">
+            </div>
+            <div class="col-md-auto">
+                <p>Health & Nutrition</p>
+            </div>
+        </div>
+    </mat-card>
+
+    <mat-card class="mat-elevation-z2" matRipple>
+        <div class="row">
+            <div class="col-md-auto" style="position: fixed;left: 10px;">
+                <img src="https://newassets.apollo247.com/pub/media/catalog/category/baby_care_22oct.png" width="40px"
+                    height="40px;" padding="20px;">
+            </div>
+            <div class="col-md-auto" style="margin-top: 10px;">
+                <p>Baby Care</p>
+            </div>
+        </div>
+    </mat-card>
+
+    <mat-card class="mat-elevation-z2" matRipple>
+        <div class="row">
+            <div class="col-md-auto" style="position: fixed;left: 10px;">
+                <img src="https://newassets.apollo247.com/pub/media/catalog/category/women_care_22oct.png" width="40px"
+                    height="40px;" padding="20px;">
+            </div>
+            <div class="col-md-auto">
+                <p>Women <br> Care</p>
+            </div>
+        </div>
+    </mat-card>
+
+    <mat-card class="mat-elevation-z2" matRipple>
+        <div class="row">
+            <div class="col-md-auto" style="position: fixed;left: 10px;">
+                <img src="https://newassets.apollo247.com/pub/media/catalog/category/logo.jpg" width="40px"
+                    height="40px;" padding="20px;">
+            </div>
+            <div class="col-md-auto">
+                <p>Covid Essentials</p>
+            </div>
+        </div>
+    </mat-card>
+
+    <mat-card class="mat-elevation-z2" matRipple>
+        <div class="row">
+            <div class="col-md-auto" style="position: fixed;left: 10px;">
+                <img src="https://newassets.apollo247.com/pub/media/catalog/category/ayurveda.jpg" width="40px"
+                    height="40px;" padding="20px;">
+            </div>
+            <div class="col-md-auto" style="margin-top: 10px;">
+                <p>Ayurveda</p>
+            </div>
+        </div>
+    </mat-card>
+</div>
+
+
+
+<!-- Half Price Store-->
+<mat-toolbar color="white" style="margin-top: 10px;">
+    Half Price Store
+    <span class="example-spacer"></span>
+   
+
+</mat-toolbar>
+
+
+<div class="container-fluid" style="display: flex;">
+    <mat-card class="mat-elevation-z3">
+        <mat-card-header>
+            <app-image [image]="Productsmodel[0].productImage"></app-image>
+        </mat-card-header>
+        <mat-card-content id="p-name">
+            <p>{{Productsmodel[0].productName}}</p>
+        </mat-card-content>
+        <mat-divider></mat-divider>
+        <mat-card-content class="mt-2" id="p-price">
+           
+            <p style="margin-top:0.5px;">₹{{Productsmodel[0].productPrice}}/-</p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-stroked-button color="warn" style="margin-left:35px;">
+                <a routerLink = "/login" routerActiveLink = "active" style="text-decoration:none; color: #f44336;" (click) = "loginFirst()">Buy Now</a></button>
+        </mat-card-actions>
+    </mat-card>
+
+    <mat-card class="mat-elevation-z3">
+        <mat-card-header>
+        <app-image [image]="Productsmodel[2].productImage"></app-image>
+        </mat-card-header>
+        <mat-card-content id="p-name">
+            <p>{{Productsmodel[2].productName}}</p>
+        </mat-card-content>
+        <mat-divider></mat-divider>
+        <mat-card-content class="mt-2" id="p-price">
+            <p style="margin-top:0.5px;">₹{{Productsmodel[2].productPrice}}/-</p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-stroked-button color="warn" style="margin-left:35px;">
+                <a routerLink = "/login" routerActiveLink = "active" style="text-decoration:none; color: #f44336;" (click) = "loginFirst()">Buy Now</a></button>
+        </mat-card-actions>
+    </mat-card>
+
+    <mat-card class="mat-elevation-z3">
+        <mat-card-header>
+            <app-image [image]="Productsmodel[3].productImage"></app-image>
+        </mat-card-header>
+        <mat-card-content id="p-name">
+            <p>{{Productsmodel[3].productName}}</p>
+        </mat-card-content>
+        <mat-divider></mat-divider>
+        <mat-card-content class="mt-2" id="p-price">
+            
+            <p style="margin-top:0.5px;">₹{{Productsmodel[3].productPrice}}/-</p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-stroked-button color="warn" style="margin-left:35px;">
+                <a routerLink = "/login" routerActiveLink = "active" style="text-decoration:none; color: #f44336;" (click) = "loginFirst()">
+                 Buy Now</a></button>
+        </mat-card-actions>
+    </mat-card>
+
+    <mat-card class="mat-elevation-z3">
+        <mat-card-header>
+            <app-image [image]="Productsmodel[5].productImage"></app-image>
+        </mat-card-header>
+        <mat-card-content id="p-name">
+            <p>{{Productsmodel[5].productName}} </p>
+        </mat-card-content>
+        <mat-divider></mat-divider>
+        <mat-card-content class="mt-2" id="p-price">
+           
+            <p style="margin-top:0.5px;">₹{{Productsmodel[5].productPrice}}/-</p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-stroked-button color="warn" style="margin-left:35px;">
+                <a routerLink = "/login" routerActiveLink = "active" style="text-decoration:none; color: #f44336;" (click) = "loginFirst()">Buy Now</a></button>
+        </mat-card-actions>
+    </mat-card>
+
+    <mat-card class="mat-elevation-z3">
+        <mat-card-header>
+            <app-image [image]="Productsmodel[6].productImage"></app-image>
+        </mat-card-header>
+        <mat-card-content id="p-name">
+            <p>{{Productsmodel[6].productName}}</p>
+        </mat-card-content>
+        <mat-divider></mat-divider>
+        <mat-card-content class="mt-2" id="p-price">
+            <p style="margin-top:0.5px;">₹{{Productsmodel[6].productPrice}}/-</p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-stroked-button color="warn" style="margin-left:35px;">
+                <a routerLink = "/login" routerActiveLink = "active" style="text-decoration:none; color: #f44336;" (click) = "loginFirst()">Buy Now</a></button>
+        </mat-card-actions>
+    </mat-card>
+
+    <mat-card class="mat-elevation-z3">
+        <mat-card-header>
+            <app-image [image]="Productsmodel[7].productImage"></app-image>
+        </mat-card-header>
+        <mat-card-content id="p-name">
+            <p>{{Productsmodel[7].productName}}</p>
+        </mat-card-content>
+        <mat-divider></mat-divider>
+        <mat-card-content class="mt-2" id="p-price">
+            <p style="margin-top:0.5px;">₹{{Productsmodel[7].productPrice}}/-</p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-stroked-button color="warn" style="margin-left:35px;">
+                <a routerLink = "/login" routerActiveLink = "active" style="text-decoration:none; color: #f44336;" (click) = "loginFirst()">Buy Now</a></button>
+        </mat-card-actions>
+    </mat-card>
+</div>
+
+<!-- code for shop locations -->
+
+<mat-toolbar color="white" style="margin-top: 10px;">
+    Nearby Shops
+    <span class="example-spacer"></span>
+</mat-toolbar>
+
+
+
+<div class="container-fluid" style="display: flex;">
+    <mat-card class="mat-elevation-z3">
+
+        <img mat-card-image class="shopImages"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThCv91DQhZ9Mguj5oEFBP8bqn6Dpw057ZMag&usqp=CAU"
+            height="100px">
+
+        <mat-card-content id="p-name">
+            <p>MedPlus Pharmacy</p>
+        </mat-card-content>
+
+        <mat-card-actions>
+            <button mat-stroked-button color="warn" style="margin-left:35px;"> Locate US</button>
+        </mat-card-actions>
+    </mat-card>
+
+    <mat-card class="mat-elevation-z3">
+
+        <img mat-card-image class="shopImages"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwfgp96Qr1HCQNoDuaE76-BorQzH9UPASrpA&usqp=CAU"
+            height="100px">
+
+        <mat-card-content id="p-name">
+            <p>MediPrix pharmacy</p>
+        </mat-card-content>
+
+        <mat-card-actions>
+            <button mat-stroked-button color="warn" style="margin-left:35px;">Locate Us</button>
+        </mat-card-actions>
+    </mat-card>
+
+    <mat-card class="mat-elevation-z3">
+
+        <img mat-card-image class="shopImages"
+            src="https://images.unsplash.com/photo-1642055514517-7b52288890ec?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fHBoYXJtYWN5fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+            height="100px">
+
+        <mat-card-content id="p-name">
+            <p>MedPlus Pharmacy</p>
+        </mat-card-content>
+
+        <mat-card-actions>
+            <button mat-stroked-button color="warn" style="margin-left:35px;"> Locate Us</button>
+        </mat-card-actions>
+    </mat-card>
+
+    <mat-card class="mat-elevation-z3">
+
+        <img mat-card-image class="shopImages"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjpu8uhLohPc654dRyN4i7lBHPcHiY4Y4vWFU7by7N&s"
+            height="100px">
+
+        <mat-card-content id="p-name">
+            <p>Medwise Pharmacy </p>
+        </mat-card-content>
+
+        <mat-card-actions>
+            <button mat-stroked-button color="warn" style="margin-left:35px;"> Locate Us</button>
+        </mat-card-actions>
+    </mat-card>
+
+    <mat-card class="mat-elevation-z3">
+
+        <img mat-card-image class="shopImages"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTF1t2E8rodMFVfPgVXnSu1VENqixc-7Ez7EQ&usqp=CAU"
+            height="100px">
+
+        <mat-card-content id="p-name">
+            <p>Denchmed Pharmacy</p>
+        </mat-card-content>
+
+        <mat-card-actions>
+            <button mat-stroked-button color="warn" style="margin-left:35px;"> Locate Us</button>
+        </mat-card-actions>
+    </mat-card>
+
+    <mat-card class="mat-elevation-z3">
+
+        <img mat-card-image class="shopImages"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqucYpn1bHG3bCvC3yPtVOhP37LwvTbET0Nw&usqp=CAU"
+            height="100px">
+
+        <mat-card-content id="p-name">
+            <p>Apollo Pharmacy</p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-stroked-button color="warn" style="margin-left:35px;"> Locate Us</button>
+        </mat-card-actions>
+    </mat-card>
+</div>
+
+<!--Code for shop By brands-->
+
+<mat-toolbar color="white" style="margin-top: 10px;">
+    Our Partnered Brands
+    <span class="example-spacer"></span>
+</mat-toolbar>
+
+<div class="container-fluid" style="display: flex;">
+    <mat-card class="mat-elevation-z1" matRipple>
+        <img src="https://newassets.apollo247.com/pub/media/ves/brand/GNCn.jpg" width="100%" height="100%;"
+            padding="30px;">
+    </mat-card>
+
+    <mat-card class="mat-elevation-z1" matRipple>
+        <img src="https://walnutfolks.com/wp-content/uploads/2020/10/pasted-image-0-7-2.png" width="100%" height="100%"
+            justify-content="center" padding="30px;">
+    </mat-card>
+
+    <mat-card class="mat-elevation-z1" matRipple>
+        <img src="https://newassets.apollo247.com/pub/media/ves/brand/onetouch_21oct.png" width="100%" height="100%;"
+            padding="30px;">
+    </mat-card>
+
+    <mat-card class="mat-elevation-z1" matRipple>
+        <img src="https://newassets.apollo247.com/pub/media/ves/brand/friends.jpg" width="100%" height="100%;"
+            padding="30px;">
+    </mat-card>
+
+    <mat-card class="mat-elevation-z1" matRipple>
+        <img src="https://newassets.apollo247.com/pub/media/ves/brand/nivea_21oct.png" width="100%" height="100%;"
+            padding="30px;">
+    </mat-card>
+
+    <mat-card class="mat-elevation-z1" matRipple>
+        <img src="data:image/png;base64,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"
+            width="100%" height="100%;" padding="30px;">
+    </mat-card>
+</div>
+
+
+<mat-toolbar color="white" style="margin-top: 10px;">
+    About Us
+    <span class="example-spacer"></span>
+</mat-toolbar>
+<div class="jumbotron jumbotron-fluid" id="backgroundImageCard">
+
+    <h1 class="display-4">Apna Pharmacy</h1>
+    <p class="lead">Widely known as India's no. 1 online E-medicine provider.</p>
+    <p class="lead">Being India’s one of the most trusted digital healthcare platforms.</p>
+    <p class="lead">Apna Pharmacy has catered to over
+        hundreds of people across various cities.</p>
+    <P class="lead">Our super quick delivery system ensures no one has to wait for days for their healthcare products
+    </P>
+    <p class="lead">to arrive at their doorsteps. </p>
+    <p class="lead">On top of that,exciting discounts and offers </p>
+    <p class="lead">have made us the household name in the cities we deliver!</p>
+</div>
+
+<!-- code for  Shop By Category-->

@@ -1,0 +1,72 @@
+<app-h-all></app-h-all>
+<mat-toolbar color="white" style="margin-top: 20px;margin-left:50px;font-size: 30px; color:rgb(62, 48, 48)">
+    Product Details
+    <span class="example-spacer"></span>
+</mat-toolbar>
+<section style="padding-bottom: 30px; padding-top:50px;">
+	<div class="container-fluid" style="display: flex;">
+
+		
+		<mat-card class="mat-elevation-z9" matRipple style="width:1000px;height:550px;margin-right: 20px;margin-left:50px; display:flex;">
+
+            
+			
+			<img [src]="image" height="250px" style="justify-content:center;margin-top:100px;margin-left:40px;">
+		   
+
+
+		   
+            <div class="des" style="margin-left:100px;">
+			<mat-card-title style="color:rgb(3, 30, 71);margin-top:50px; ">{{productDetails.productName}} </mat-card-title>
+			<p>
+				<button mat-raised-button color="disabled" style="color: rgb(56, 147, 218)"> INR
+					{{productDetails.productPrice}} (inclusive of all taxes) </button>
+			</p>
+			
+			<P class="text-style">Manufactured By:  {{productDetails.productBrand}} </P>
+			<p class="text-style">Expires on: 27th June 2023</p>
+
+			<p style="color:rgb(7, 62, 64)">
+				----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+			</p>
+            <h3>Product Description:</h3>
+			<p class="text-style-p">{{productDetails.productDescription}}.</p>
+
+			<p style="color:rgb(7, 62, 64)">
+				-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+			</p>
+			<p> Other information : Keep out of reach of children and store in a cool and dry place</p>
+			<p style="color:rgb(33, 50, 90)">
+				<button mat-raised-button color="disabled"> Item not refundable </button>
+			</p>
+		
+		    </div>
+		
+
+
+		</mat-card>
+	    
+		
+
+
+		<mat-card class="mat-elevation-z9" matRipple style="margin-left:50px;width: 350px; height:200px;">
+			<mat-card-header>
+				<div class="col-md-auto" style="position: absolute;">
+					<!-- <i class="fa-solid fa-cart-plus"></i> -->
+				</div>
+				<mat-card-title style="color:rgb(3, 30, 71);padding-left: 50px;"> Price : ₹ {{productDetails.productPrice}}
+					</mat-card-title>
+					<mat-card-title style="font-size:13px;margin-left: 50px;">(Inclusive of all taxes)</mat-card-title>
+
+			</mat-card-header>
+			<mat-card-footer style="padding-left:25px ;">
+				<mat-card-actions>
+					<button mat-raised-button color="primary" (click)="Addtocart()" style="margin-left: 65px;"> Add To Cart </button>
+
+				</mat-card-actions>
+			</mat-card-footer>
+		</mat-card>
+	</div>
+</section>
+
+<app-f-all></app-f-all>

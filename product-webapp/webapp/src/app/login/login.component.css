@@ -1,0 +1,47 @@
+
+
+
+#bgcolor{
+    height: 750px;
+    }
+
+
+
+.page{
+ background-color: white;
+ margin-top: 120px;
+ border-radius : 30px;
+ justify-content: center;
+ padding-left: 0px;
+ padding-right: 50px;
+ width: 75%;
+ margin-left: 160px;;
+ }
+ 
+ 
+ .col{
+justify-content: center;
+
+}
+
+.btn1{
+ border: none;
+ outline: none;
+ height: 40px;
+ width: 50%;
+ background-color: rgb(69, 25, 230);
+ color: white;
+ border-radius: 4px;
+ font-weight: bold;
+ margin-left: 110px;
+ padding-bottom: 0px;}
+
+
+ img{
+     border-top-left-radius: 30px;
+     border-bottom-left-radius: 30px;
+    
+     margin: 0px;
+     padding: 0px;
+     height: 355px;
+ }

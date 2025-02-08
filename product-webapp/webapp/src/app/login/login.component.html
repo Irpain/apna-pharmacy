@@ -1,0 +1,51 @@
+<app-login-header></app-login-header>
+<div class="p-3  bg-light text-dark" id="bgcolor">
+  <div class="page">
+  <div class="container">
+      <div class="row ">
+        
+          <div class="col-sm-8">
+          <img src=".\.\assets\img-pr\medicine4.jpg" class="img-fluid" width="100%" height="100%"  alt="Loading..">
+        </div>
+       
+        <div class="col-sm-4">
+          <h1 class="font-weight-bold py-3"  style="text-align:center ;">Sign in</h1>
+          
+          <form [formGroup]="loginForm" autocomplete="false" (ngSubmit)="forLogin()">
+              <div class="form-row">
+                  <div class="mb-3">
+                    <input type="email" placeholder="Email Address" class="form-control" formControlName="email" autocomplete="off">
+                    <span *ngIf= "f['email'].getError('required')!=null" class="text-danger"> Email is required</span>
+                    <span *ngIf= "f['email'].getError('email')!=null" class="text-danger">Email is required in proper format</span>
+                  </div>
+              </div>
+  
+              <div class="form-row">
+                  <div class="mb-3">
+                    <input type="password" placeholder="********" class="form-control" formControlName="password"  autocomplete="off">    
+                    <span *ngIf= "f['password'].getError('required')!=null" class="text-danger"> Password is required</span>
+                  </div>
+                </div>
+                   
+  
+              <div class="form-row">
+                  <div class="col-lg-7">
+                    <button type="submit" class="btn1 mt-2 mb-5">Sign in</button>
+                    <span class="text-danger">{{message}}</span>
+                    
+                  </div>
+                </div>
+                <p style="text-align:center;" >Don't have an account? <a routerLink="/register">Register here</a></p>
+                
+          </form>
+  
+  
+        </div>
+  
+      </div>
+  </div>
+  </div>
+  </div>
+
+  <app-f-all></app-f-all>
+  
