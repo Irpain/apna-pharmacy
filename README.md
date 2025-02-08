@@ -1,4 +1,3 @@
-```markdown
 # 📦 Apna-Pharmacy Website (Microservices Architecture)
 
 This project is a **Pharmacy Website** built using **Spring Boot (Java) for backend microservices** and **Angular for frontend**. The system follows a **microservices architecture**, where each service is deployed separately and communicates via **RabbitMQ** for messaging. The project is **containerized using Docker** for easy deployment and scalability.
@@ -179,4 +178,3 @@ This project is licensed under **MIT License**.
 - **Umang**
 
 Feel free to contribute! 🚀
-```
